@@ -26,5 +26,13 @@ public class Compte {
     public void setSoldeCompte(float soldeCompte){
         this.soldeCompte=soldeCompte;
     }
+    public void opperationSoldeCompte(String signe,float valeur ){
+        {
+            if (signe == "enleve"){
+                valeur=valeur*-1;
+            }
+            this.soldeCompte=this.soldeCompte+valeur;
+        }
+    }
 
 }
