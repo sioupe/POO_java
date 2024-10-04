@@ -9,6 +9,7 @@ public class Compte {
         this.soldeCompte = 0.0f;
     }
     public Compte(int numCompte,float soldeCompte){
+
         this.numCompte=numCompte;
         this.soldeCompte = soldeCompte;
     }
@@ -35,4 +36,8 @@ public class Compte {
         }
     }
 
+    @Override
+    public String toString() {
+        return "numCompte= " + numCompte + " soldeCompte= " + soldeCompte;
+    }
 }
