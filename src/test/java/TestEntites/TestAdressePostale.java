@@ -1,3 +1,5 @@
+package TestEntites;
+
 import org.entites.AdressePostale;
 
 public class TestAdressePostale {
