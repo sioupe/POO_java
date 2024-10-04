@@ -6,9 +6,10 @@ public class TestPersonne {
         Personne p1 = new Personne("Jean","Jacques");
 
         Personne p2 = new Personne("Jean","Jacques",new AdressePostale(58,34130,"Marechal Ferrand","Mauguio"));
+        Personne p3 = new Personne("Michel", "Lavache");
 
-
-
+        p3.setAdresse(new AdressePostale(8, 34740,"Pompidou","Castelanu-Le-Lez"));
+        p3.affichage();
         /*p1.nom = "jacques";
         p1.prenom = "jean";
         p1.adresse = new AdressePostale();
