@@ -1,9 +1,5 @@
-package test.operation;
-
-import fr.diginamic.banque.entites.Operation;
+package fr.diginamic.essais;
 import fr.diginamic.operations.Operations;
-
-import java.util.Scanner;
 
 public class TestOperations {
     public static void main(String[] args) {
