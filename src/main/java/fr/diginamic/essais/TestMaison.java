@@ -14,6 +14,10 @@ public class TestMaison {
         maison.ajouterPiece(new WC(5,0));
         maison.ajouterPiece(new WC(5,1));
         maison.ajouterPiece(new Salon(30,0));
+        maison.ajouterPiece(null);
+        maison.ajouterPiece(new Salon(-20,-3));
+
+
 
         System.out.println("la maison a une superficie de "+maison.superficieTotal()+" m²");
         System.out.println("le rez de chaussé fait "+maison.superficieEtage(0)+" m²");
