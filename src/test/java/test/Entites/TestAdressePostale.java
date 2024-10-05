@@ -1,6 +1,6 @@
 package test.Entites;
 
-import org.entites.AdressePostale;
+import fr.diginamic.entites.AdressePostale;
 
 public class TestAdressePostale {
     public static void main(String[] args) {

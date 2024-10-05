@@ -1,4 +1,4 @@
-package org.entites;
+package fr.diginamic.entites;
 
 public class AdressePostale {
     public int numeroDeRue;
