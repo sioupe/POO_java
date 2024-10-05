@@ -1,6 +1,5 @@
 package fr.diginamic.maison;
 
-import javax.lang.model.type.NullType;
 
 public class Maison {
 
@@ -44,4 +43,24 @@ public class Maison {
         return superficieTotal;
     }
 
+    public int superficieTypePiece(String typePiece){
+        int superficieTotal =0;
+
+        for (Piece piece:pieces){
+            if (typePiece.equals (piece.getClass().getName().substring(piece.getClass().getName().lastIndexOf(".")+1))) {
+                superficieTotal+=piece.getSuperficie();
+            }
+        }
+        return superficieTotal;
+    }
+    public int nombreTypePiece(String typePiece){
+        int nbPiece =0;
+
+        for (Piece piece:pieces){
+            if (typePiece.equals (piece.getClass().getName().substring(piece.getClass().getName().lastIndexOf(".")+1))) {
+                nbPiece++;
+            }
+        }
+        return nbPiece;
+    }
 }

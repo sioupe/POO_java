@@ -18,9 +18,11 @@ public class TestMaison {
         maison.ajouterPiece(new Salon(-20,-3));
 
 
-
         System.out.println("la maison a une superficie de "+maison.superficieTotal()+" m²");
         System.out.println("le rez de chaussé fait "+maison.superficieEtage(0)+" m²");
         System.out.println("le premier étage fait "+maison.superficieEtage(1)+" m²");
+        System.out.println("les chambres font "+maison.superficieTypePiece("Chambre")+ "m²");
+        System.out.println("Il y a "+maison.nombreTypePiece("Chambre")+ " chambre");
+
     }
 }
