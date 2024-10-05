@@ -1,4 +1,4 @@
-package utils;
+package test.utils;
 
 public class TestMethodeStatic {
     public static void main(String[] args) {

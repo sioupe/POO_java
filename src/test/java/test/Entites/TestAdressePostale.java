@@ -1,4 +1,4 @@
-package TestEntites;
+package test.Entites;
 
 import org.entites.AdressePostale;
 
