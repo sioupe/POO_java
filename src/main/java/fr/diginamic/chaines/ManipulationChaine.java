@@ -1,5 +1,7 @@
 package fr.diginamic.chaines;
 
+import fr.diginamic.entites.Salarie;
+
 public class ManipulationChaine {
     public static void main(String[] args) {
         String chaine = "Durand;Marcel;2 0523.5";
@@ -14,7 +16,9 @@ public class ManipulationChaine {
         for(String mot: tab) {
             System.out.print(mot+" ");
         }
-        System.out.print("\n");
+        System.out.println("");
+
+        Salarie salarie =new Salarie(tab[0],tab[1], Double.parseDouble(tab[2].replace(" ","")));
 
 
     }
