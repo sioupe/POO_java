@@ -2,7 +2,7 @@ package fr.diginamic.maison;
 
 public class Maison {
 
-    private Piece[] pieces;
+    private Piece[] pieces =new Piece[0];
 
 
     public void ajouterPiece(Piece nouvellePiece){
@@ -10,8 +10,8 @@ public class Maison {
         for (int i = 0; i < pieces.length; i++) {
             tampon[i]=pieces[i];
         }
-        pieces=new Piece[pieces.length];
-        for (int i = 0; i < pieces.length; i++) {
+        pieces=new Piece[pieces.length+1];
+        for (int i = 0; i < tampon.length; i++) {
             pieces[i]=tampon[i];
         }
         pieces[pieces.length-1]=nouvellePiece;
@@ -24,7 +24,7 @@ public class Maison {
         }
         return superficieTotal;
     }
-    public int superficieTotal(int etage){
+    public int superficieEtage(int etage){
         int superficieTotal =0;
         for (Piece piece:pieces){
             if (etage == piece.getEtage()) {
