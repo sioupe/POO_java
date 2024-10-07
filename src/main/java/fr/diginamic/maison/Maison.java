@@ -5,7 +5,11 @@ public class Maison {
 
     private Piece[] pieces =new Piece[0];
 
+    /*private int superficieTotal = 0;
 
+    public int getSuperficieTotal() {
+        return superficieTotal;
+    }*/
     public void ajouterPiece(Piece nouvellePiece){
         if (nouvellePiece==null){
             System.out.println("rentré une piece please");
@@ -24,7 +28,9 @@ public class Maison {
             pieces[i]=tampon[i];
         }
         pieces[pieces.length-1]=nouvellePiece;
+       // superficieTotal += nouvellePiece.getSuperficie();
     }
+
 
     public int superficieTotal(){
         int superficieTotal =0;
