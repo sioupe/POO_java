@@ -10,7 +10,7 @@ public abstract class Entite {
     }
 
     public void setSante(int sante) {
-        this.sante += sante;
+        this.sante -= sante;
     }
 
     public int getForce() {

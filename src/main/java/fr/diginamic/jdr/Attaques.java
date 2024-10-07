@@ -6,7 +6,7 @@ public class Attaques {
         if ((degat=(entite1.taper() - entite2.taper()))>=0) {
             entite2.setSante(degat);
         }else {
-            entite1.setSante(degat);
+            entite1.setSante(degat*(-1));
         }
     }
 }

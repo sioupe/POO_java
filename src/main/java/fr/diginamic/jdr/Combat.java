@@ -20,7 +20,7 @@ public class Combat {
                     System.out.println("oui y a pas d'autres choix pour le moment c'est en wip");
 
             }
-            System.out.print("pv perso = "+perso.getSante()+ "| pv monstre = "+monstre.getSante());
+            System.out.println("pv perso = "+perso.getSante()+ "| pv "+monstre.getClass().getName().substring(getClass().getName().lastIndexOf(".")+1)+" = "+monstre.getSante());
         }
 
 
