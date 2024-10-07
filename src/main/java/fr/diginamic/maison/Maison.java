@@ -20,13 +20,9 @@ public class Maison {
             return;
         }
         Piece[] tampon = new Piece[pieces.length];
-        for (int i = 0; i < pieces.length; i++) {
-            tampon[i]=pieces[i];
-        }
+        System.arraycopy(pieces, 0, tampon, 0, pieces.length);
         pieces=new Piece[pieces.length+1];
-        for (int i = 0; i < tampon.length; i++) {
-            pieces[i]=tampon[i];
-        }
+        System.arraycopy(tampon, 0, pieces, 0, tampon.length);
         pieces[pieces.length-1]=nouvellePiece;
        // superficieTotal += nouvellePiece.getSuperficie();
     }
