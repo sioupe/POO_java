@@ -1,4 +1,4 @@
-package fr.diginamic.combat;
+package fr.diginamic.jdr;
 
 public class Perso extends Entite {
     private Potion[] ceinturePotion = new Potion[3];

@@ -1,4 +1,4 @@
-package fr.diginamic.combat;
+package fr.diginamic.jdr;
 
 public class Gobelin extends Entite {
     public Gobelin() {

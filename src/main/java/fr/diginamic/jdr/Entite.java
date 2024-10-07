@@ -1,4 +1,4 @@
-package fr.diginamic.combat;
+package fr.diginamic.jdr;
 
 public abstract class Entite {
     int force;

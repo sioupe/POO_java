@@ -5,13 +5,9 @@ public class CalculMoyenne {
 
     public void ajout(double valeur) {
         double[] tampon = new double[this.tabDeVal.length];
-        for (int i = 0; i < tampon.length; i++) {
-            tampon[i]=tabDeVal[i];
-        }
+        System.arraycopy(tabDeVal, 0, tampon, 0, tampon.length);
         tabDeVal = new double[tabDeVal.length+1];
-        for (int i = 0; i < tampon.length; i++) {
-            tabDeVal[i]=tampon[i];
-        }
+        System.arraycopy(tampon, 0, tabDeVal, 0, tampon.length);
         tabDeVal[tabDeVal.length-1]=valeur;
 
     }

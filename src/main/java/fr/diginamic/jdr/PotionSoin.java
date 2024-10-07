@@ -1,4 +1,4 @@
-package fr.diginamic.combat;
+package fr.diginamic.jdr;
 
 public class PotionSoin extends Potion{
     public PotionSoin(int valeur, String nom) {
