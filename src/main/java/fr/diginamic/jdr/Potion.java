@@ -8,7 +8,9 @@ public abstract class  Potion {
         this.valeur = valeur;
         this.nom = nom;
     }
-    public void description(){
+    public abstract void description();
+    public int use(){
+        return this.valeur;
     }
 
 }

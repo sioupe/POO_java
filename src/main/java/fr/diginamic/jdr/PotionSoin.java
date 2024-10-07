@@ -9,7 +9,5 @@ public class PotionSoin extends Potion{
     public void description() {
         System.out.println("la potion soigne "+this.valeur+" de vie");
     }
-    public int use(){
-        return this.valeur;
-    }
+
 }
