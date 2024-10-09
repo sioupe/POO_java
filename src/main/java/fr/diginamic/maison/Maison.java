@@ -30,6 +30,7 @@ public class Maison {
 
     public int superficieTotal(){
         int superficieTotal =0;
+
         for (Piece piece:pieces){
             superficieTotal += piece.getSuperficie();
         }
