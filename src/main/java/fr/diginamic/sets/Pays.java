@@ -5,6 +5,7 @@ public class Pays {
     private  long nbHab ;
     private  double PIBHab ;
 
+
     public Pays(Pays pays) {
         this.nom = pays.getNom();
         this.PIBHab = pays.PIBHab;

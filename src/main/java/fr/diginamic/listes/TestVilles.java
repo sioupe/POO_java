@@ -11,7 +11,7 @@ public class TestVilles {
         Ville villePlusPeuple = new Ville(listVille.getFirst());
         Ville villeMoinsPeuple = new Ville(listVille.getFirst());
 
-        
+
         for (Ville ville :listVille ) {
             if (ville.getNbHab() > villePlusPeuple.getNbHab()) {
                 villePlusPeuple=ville;
