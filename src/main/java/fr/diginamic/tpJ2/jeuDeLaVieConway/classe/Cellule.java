@@ -4,21 +4,32 @@ import java.util.ArrayList;
 
 public class Cellule {
     private boolean etat;
+    private ArrayList<Boolean> celluleAutour;
     private int x;
     private int y;
-
-    public Cellule(boolean etat, int x, int y) {
+    public Cellule(boolean etat,int x, int y) {
         this.etat = etat;
         this.x = x;
         this.y = y;
+
+        celluleAutour=new ArrayList<>();
+
+    }
+
+    public ArrayList<Boolean> getCelluleAutour() {
+        return celluleAutour;
+    }
+
+    public void setCelluleAutour(ArrayList<Boolean> celluleAutour) {
+        this.celluleAutour = celluleAutour;
+    }
+
+    public int getX() {
+        return x;
     }
 
     public int getY() {
         return y;
-    }
-
-    public Cellule(boolean etat) {
-        this.etat = etat;
     }
 
     public boolean getEtat() {
@@ -28,11 +39,16 @@ public class Cellule {
     public void setEtat(boolean etat) {
         this.etat = etat;
     }
-    public Boolean MAJEtat(ArrayList<Boolean> celluleAutour){
-        return switch (celluleAutour.size()) {
-            case 2 -> this.getEtat();
-            case 3 -> true;
-            default -> false;
+    public void MAJEtat(){
+        switch (celluleAutour.size()) {
+
+            case 2 :
+                break;
+            case 3 :
+                this.etat= true;
+                break;
+            default :
+                this.etat=false;
         };
     }
 
