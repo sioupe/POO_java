@@ -20,7 +20,7 @@ public class Ville implements Comparable<Ville> {
         return nom;
     }
 
-    public int getNbHab() {
+    public Integer getNbHab() {
         return nbHab;
     }
 
@@ -34,6 +34,6 @@ public class Ville implements Comparable<Ville> {
 
     @Override
     public int compareTo(Ville ville) {
-        return Integer.compare(this.getNom().compareTo(ville.getNom()), 0);
+        return Integer.compare(this.getNbHab().compareTo(ville.getNbHab()), 0);
     }
 }
