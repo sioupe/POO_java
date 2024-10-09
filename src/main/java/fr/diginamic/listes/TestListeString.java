@@ -21,7 +21,7 @@ public class TestListeString {
         }
         System.out.println("liste apres majuscule : "+list);
 
-        list.removeIf(s -> (s.charAt(0) == 'N'));
+        list.removeIf(ville -> (ville.charAt(0) == 'N'));
         System.out.println(list);
     }
 

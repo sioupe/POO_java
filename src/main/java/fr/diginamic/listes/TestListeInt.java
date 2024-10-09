@@ -6,7 +6,7 @@ import java.util.Collections;
 public class TestListeInt {
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
-        Collections.addAll(list,-1,5,7,3,-2,4,8,5);
+        Collections.addAll(list,-1,5,7,3,-2,-2,4,8,5);
 
         System.out.println("la liste : "+list);
         System.out.println("taille de list = "+list.size());
