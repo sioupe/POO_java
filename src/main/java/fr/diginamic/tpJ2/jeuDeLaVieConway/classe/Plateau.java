@@ -26,6 +26,7 @@ public class Plateau {
 
             }
         }
+        return celluleAutour;
     }
 
     @Override
