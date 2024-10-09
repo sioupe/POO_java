@@ -1,10 +1,11 @@
 package fr.diginamic.tpJ2.jeuDeLaVieConway.classe;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Cellule {
     private boolean etat;
-    private ArrayList<Boolean> celluleAutour;
+    private HashSet<Boolean> celluleAutour;
     private int x;
     private int y;
     public Cellule(boolean etat,int x, int y) {
@@ -12,16 +13,16 @@ public class Cellule {
         this.x = x;
         this.y = y;
 
-        celluleAutour=new ArrayList<>();
+        celluleAutour=new HashSet<>();
 
     }
 
-    public ArrayList<Boolean> getCelluleAutour() {
+    public HashSet<Boolean> getCelluleAutour() {
         return celluleAutour;
     }
 
-    public void setCelluleAutour(ArrayList<Boolean> celluleAutour) {
-        this.celluleAutour = celluleAutour;
+    public void addCelluleAutour(boolean val) {
+        this.celluleAutour.add(val);
     }
 
     public int getX() {
@@ -33,7 +34,7 @@ public class Cellule {
     }
 
     public boolean getEtat() {
-        return etat;
+        return this.etat;
     }
 
     public void setEtat(boolean etat) {
