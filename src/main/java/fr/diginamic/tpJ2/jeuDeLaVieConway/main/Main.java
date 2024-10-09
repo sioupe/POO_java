@@ -12,5 +12,9 @@ public class Main {
         System.out.println(plateau);
         plateau.MAJPlateau();
         System.out.println(plateau);
+        plateau.MAJPlateau();
+        System.out.println(plateau);
+        plateau.MAJPlateau();
+        System.out.println(plateau);
     }
 }

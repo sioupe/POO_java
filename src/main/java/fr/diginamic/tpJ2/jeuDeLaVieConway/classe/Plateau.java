@@ -7,9 +7,9 @@ public class Plateau {
 
 
     public Plateau(int largeur, int hauteur) {
-        for (int y = 0; y < hauteur - 1; y++) {
+        for (int y = 0; y < hauteur; y++) {
             this.plateau.add(new ArrayList<>());
-            for (int x = 0; x < largeur - 1; x++) {
+            for (int x = 0; x < largeur; x++) {
                 this.plateau.get(y).add(new Cellule(false, x, y));
             }
         }
@@ -28,14 +28,12 @@ public class Plateau {
 
     public void contourCellule(Cellule cellule) {
         cellule.getCelluleAutour().clear();
-        System.out.println("------");
         int k = 0;
         for (int i = -1; i < 2; i++) {
             for (int j = -1; j < 2; j++) {
                 if (!( i== 0 && j==0) && this.getCellule(cellule.getX()+j, cellule.getY()+i).getEtat()) {
-                    System.out.println(k++);
-                    cellule.getCelluleAutour().add(true);
 
+                    cellule.getCelluleAutour().add(true);
                 }
 
             }
@@ -63,9 +61,10 @@ public class Plateau {
 
     @Override
     public String toString() {
-        for (ArrayList<Cellule> ligne : plateau) {
-            System.out.println(ligne);
-        }
+        for (int i = 1; i < this.plateau.size(); i++) {
+                System.out.println(this.plateau.get(i));
+            }
+
         return "";
     }
 }

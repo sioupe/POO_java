@@ -5,7 +5,7 @@ import java.util.HashSet;
 
 public class Cellule {
     private boolean etat;
-    private HashSet<Boolean> celluleAutour;
+    private ArrayList<Boolean> celluleAutour;
     private int x;
     private int y;
     public Cellule(boolean etat,int x, int y) {
@@ -13,11 +13,11 @@ public class Cellule {
         this.x = x;
         this.y = y;
 
-        celluleAutour=new HashSet<>();
+        celluleAutour=new ArrayList<>();
 
     }
 
-    public HashSet<Boolean> getCelluleAutour() {
+    public ArrayList<Boolean> getCelluleAutour() {
         return celluleAutour;
     }
 
