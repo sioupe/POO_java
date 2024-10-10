@@ -1,11 +1,28 @@
 package fr.diginamic.tpJ2.jeuDeLaVieConway.classe;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Plateau {
     private ArrayList<ArrayList<Cellule>> plateau = new ArrayList<>();
 
 
+    /*public Plateau(String path) throws IOException {
+        Path pathEntrée = Paths.get(path);
+        List<String> plateauTexte = Files.readAllLines(pathEntrée);
+        for (String ligne : plateauTexte){
+            this.plateau.add(new ArrayList<>());
+            for (char cellule : ligne.toCharArray() ) {
+                this.plateau.getLast().add(new Cellule(false, this.plateau.getLast().getLast().i, y));
+
+            }
+        }
+
+    }*/
     public Plateau(int largeur, int hauteur) {
         for (int y = 0; y < hauteur; y++) {
             this.plateau.add(new ArrayList<>());

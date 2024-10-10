@@ -29,17 +29,31 @@ public class LectureFichier {
 
         }
         Path pathEcrire = Paths.get("E:\\Diginamic\\approche-objet\\exo4.csv");
-
+        List<String> lines = Files.readAllLines(path);
         Files.writeString(pathEcrire,entete[6]+";"+entete[0]+";"+entete[1]+";"+entete[9]);
-
+         List<Long[]> nbVilleDep =new ArrayList<>();
+         List<Long[]> nbPopDep =new ArrayList<>();
+         nbVilleDep.add(new Long[]{(long)listeVilles.getFirst().getCodeDepartement(),1L});
         for (Commune commune :listeVilles ) {
             if (commune.getPopTotal()>=25000){
                 Files.writeString(pathEcrire,commune.conversionFichier(), StandardOpenOption.APPEND);
             }
+            for (Long[] codePostal :nbVilleDep ) {
+                System.out.println(commune.getCodeDepartement()+"|"+codePostal[0]);
+                if (commune.getCodeDepartement()==codePostal[0]){
+
+                    codePostal[1]++;
+                }else {
+                    nbVilleDep.add(new Long[]{(long)commune.getCodeDepartement(), 1L});
+                }
+            }
+
+
         }
-
-
-        //List<String> lines = Files.readAllLines(path);
+        for (Long[] element :nbVilleDep ) {
+            System.out.println(element[0]+ "|"+element[1]);
+        }
+        System.out.println(nbVilleDep);
         //System.out.println(lines);
     }
 }

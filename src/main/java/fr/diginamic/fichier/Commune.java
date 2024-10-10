@@ -15,6 +15,10 @@ public class Commune {
         this.PopTotal = popTotal;
     }
 
+    public int getCodeDepartement() {
+        return codeDepartement;
+    }
+
     public long getPopTotal() {
         return PopTotal;
     }
