@@ -15,7 +15,7 @@ public class Commune {
 
     @Override
     public String toString() {
-        return "Ville{" +
+        return "Commune{" +
                 "nom='" + nom + '\'' +
                 ", codeDepartement=" + codeDepartement +
                 ", nomRegion='" + nomRegion + '\'' +

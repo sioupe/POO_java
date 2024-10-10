@@ -15,15 +15,15 @@ public class LectureFichier {
 
         FileReader fileReader = new FileReader("E:\\Diginamic\\approche-objet\\recensement.csv");
         BufferedReader bufferedReader =new BufferedReader(fileReader);
+        bufferedReader.readLine();
         for (int i = 0; i < 100; i++) {
             String tampon=bufferedReader.readLine();
             String [] infoVille=tampon.split(";");
-            System.out.println( infoVille[6]+" "+infoVille[0]+" "+infoVille[1]+" "+infoVille[9]);
             System.out.println();
-            //listeVilles.add(new Ville(infoVille[6],Integer.parseInt(infoVille[0]),infoVille[1],12 ));
+            listeVilles.add(new Commune(infoVille[6],Integer.parseInt(infoVille[0]),infoVille[1],Long.parseLong(infoVille[9].replace(" ","")) ));
 
-            System.out.println(tampon);
         }
+        System.out.println(listeVilles.get(1));
         //List<String> lines = Files.readAllLines(path);
         //System.out.println(lines);
     }
