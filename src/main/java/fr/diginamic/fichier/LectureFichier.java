@@ -21,7 +21,6 @@ public class LectureFichier {
         FileReader fileReader = new FileReader("E:\\Diginamic\\approche-objet\\recensement.csv");
         BufferedReader bufferedReader =new BufferedReader(fileReader);
         String[] entete =bufferedReader.readLine().split(";");
-
         for (int i = 0; i < 100; i++) {
             String tampon=bufferedReader.readLine();
             String [] infoVille=tampon.split(";");
@@ -39,12 +38,12 @@ public class LectureFichier {
                 Files.writeString(pathEcrire,commune.conversionFichier(), StandardOpenOption.APPEND);
             }
             for (Long[] codePostal :nbVilleDep ) {
-                System.out.println(commune.getCodeDepartement()+"|"+codePostal[0]);
                 if (commune.getCodeDepartement()==codePostal[0]){
 
                     codePostal[1]++;
                 }else {
                     nbVilleDep.add(new Long[]{(long)commune.getCodeDepartement(), 1L});
+
                 }
             }
 
@@ -53,7 +52,6 @@ public class LectureFichier {
         for (Long[] element :nbVilleDep ) {
             System.out.println(element[0]+ "|"+element[1]);
         }
-        System.out.println(nbVilleDep);
         //System.out.println(lines);
     }
 }

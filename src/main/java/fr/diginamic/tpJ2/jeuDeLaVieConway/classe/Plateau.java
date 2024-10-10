@@ -5,10 +5,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Plateau {
     private ArrayList<ArrayList<Cellule>> plateau = new ArrayList<>();
+
 
 
     /*public Plateau(String path) throws IOException {
@@ -17,12 +19,13 @@ public class Plateau {
         for (String ligne : plateauTexte){
             this.plateau.add(new ArrayList<>());
             for (char cellule : ligne.toCharArray() ) {
-                this.plateau.getLast().add(new Cellule(false, this.plateau.getLast().getLast().i, y));
+                this.plateau.getLast().add(new Cellule(cellule, , ));
 
             }
         }
-
     }*/
+
+    
     public Plateau(int largeur, int hauteur) {
         for (int y = 0; y < hauteur; y++) {
             this.plateau.add(new ArrayList<>());
@@ -55,9 +58,6 @@ public class Plateau {
 
             }
         }
-
-
-
 
 
     }
