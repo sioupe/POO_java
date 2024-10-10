@@ -25,7 +25,7 @@ public class Plateau {
         }
     }*/
 
-    
+
     public Plateau(int largeur, int hauteur) {
         for (int y = 0; y < hauteur; y++) {
             this.plateau.add(new ArrayList<>());
