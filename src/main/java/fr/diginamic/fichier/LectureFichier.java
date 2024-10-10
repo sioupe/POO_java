@@ -29,7 +29,6 @@ public class LectureFichier {
         for (int i = 0; i < 100; i++) {
             String tampon=bufferedReader.readLine();
             String [] infoVille=tampon.split(";");
-            System.out.println();
             listeVilles.add(new Commune(infoVille[6],Integer.parseInt(infoVille[0]),infoVille[1],Long.parseLong(infoVille[9].replace(" ","")) ));
 
         }
@@ -44,7 +43,6 @@ public class LectureFichier {
         }
 
 
-        System.out.println(listeVilles.get(1));
         //List<String> lines = Files.readAllLines(path);
         //System.out.println(lines);
     }
