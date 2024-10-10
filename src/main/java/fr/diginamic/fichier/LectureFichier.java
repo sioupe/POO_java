@@ -21,11 +21,7 @@ public class LectureFichier {
         FileReader fileReader = new FileReader("E:\\Diginamic\\approche-objet\\recensement.csv");
         BufferedReader bufferedReader =new BufferedReader(fileReader);
         String[] entete =bufferedReader.readLine().split(";");
-        List<String> enteteEcrire = new ArrayList<>();
-        /*enteteEcrire.add(entete[6]);
-        enteteEcrire.add(entete[0]);
-        enteteEcrire.add(entete[1]);
-        enteteEcrire.add(entete[9]);*/
+
         for (int i = 0; i < 100; i++) {
             String tampon=bufferedReader.readLine();
             String [] infoVille=tampon.split(";");
