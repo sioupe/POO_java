@@ -1,16 +1,25 @@
 package fr.diginamic.fichier;
 
+import java.util.List;
+
 public class Commune {
-    private String nom;
-    private int codeDepartement;
-    private String nomRegion;
-    private long PopTotal;
+    private final String nom;
+    private final int codeDepartement;
+    private final String nomRegion;
+    private final long PopTotal;
 
     public Commune(String nom, int codeDepartement, String nomRegion, long popTotal) {
         this.nom = nom;
         this.codeDepartement = codeDepartement;
         this.nomRegion = nomRegion;
         this.PopTotal = popTotal;
+    }
+
+    public long getPopTotal() {
+        return PopTotal;
+    }
+    public String conversionFichier(){
+        return "\n"+this.nom+";"+this.codeDepartement+";"+this.nomRegion+";"+this.PopTotal;
     }
 
     @Override
