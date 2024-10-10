@@ -33,7 +33,7 @@ public class Ville implements Comparable<Ville> {
     }
 
     @Override
-    public int compareTo(Ville ville) {
-        return Integer.compare(this.getNbHab().compareTo(ville.getNbHab()), 0);
+    public int compareTo(Ville autre) {
+        return this.getNbHab().compareTo(autre.getNbHab());
     }
 }
