@@ -13,19 +13,17 @@ public class Plateau {
 
 
 
-    /*public Plateau(String path) throws IOException {
-        Path pathEntrée = Paths.get(path);
-        List<String> plateauTexte = Files.readAllLines(pathEntrée);
-        for (String ligne : plateauTexte){
-            this.plateau.add(new ArrayList<>());
-            for (char cellule : ligne.toCharArray() ) {
-                this.plateau.getLast().add(new Cellule(cellule, , ));
 
+
+    public Plateau(List<String> plateau){
+        for (int y = 0; y < plateau.size(); y++) {
+            this.plateau.add(new ArrayList<Cellule>());
+            char[] ligne= plateau.get(y).toCharArray();
+            for (int x = 0; x < ligne.length; x++) {
+                this.plateau.get(y).add(new Cellule(ligne[x],x,y));
             }
         }
-    }*/
-
-
+    }
     public Plateau(int largeur, int hauteur) {
         for (int y = 0; y < hauteur; y++) {
             this.plateau.add(new ArrayList<>());
@@ -35,6 +33,9 @@ public class Plateau {
         }
 
 
+    }
+    public Plateau(String path) throws IOException {
+        this(recupLienTexte(path));
     }
 
 
@@ -75,7 +76,11 @@ public class Plateau {
         }
 
     }
-
+    private static List<String>recupLienTexte(String path) throws IOException {
+        Path pathEntrée = Paths.get(path);
+        List<String> plateauTexte = Files.readAllLines(pathEntrée);
+        return plateauTexte;
+    }
     @Override
     public String toString() {
         for (int i = 1; i < this.plateau.size(); i++) {

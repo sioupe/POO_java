@@ -8,6 +8,15 @@ public class Cellule {
     private ArrayList<Boolean> celluleAutour;
     private int x;
     private int y;
+    public Cellule(char etat, int x ,int y){
+        if ('1' == etat){
+            this.etat=true;
+        }else {
+            this.etat=false;
+        }
+        this.x = x;
+        this.y = y;
+    }
     public Cellule(boolean etat,int x, int y) {
         this.etat = etat;
         this.x = x;
