@@ -6,14 +6,10 @@ import java.util.HashSet;
 public class Cellule {
     private boolean etat;
     private ArrayList<Boolean> celluleAutour;
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
     public Cellule(char etat, int x ,int y){
-        if ('1' == etat){
-            this.etat=true;
-        }else {
-            this.etat=false;
-        }
+        this.etat= '1' == etat;
         this.x = x;
         this.y = y;
     }
@@ -59,12 +55,12 @@ public class Cellule {
                 break;
             default :
                 this.etat=false;
-        };
+        }
     }
 
     @Override
     public String toString() {
-        if (etat == true) {
+        if (etat) {
             return " x ";
         }else {
             return "   " ;

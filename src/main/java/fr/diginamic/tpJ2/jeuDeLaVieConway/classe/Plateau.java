@@ -5,11 +5,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Plateau {
-    private ArrayList<ArrayList<Cellule>> plateau = new ArrayList<>();
+    private final ArrayList<ArrayList<Cellule>> plateau = new ArrayList<>();
 
 
 
@@ -17,7 +16,7 @@ public class Plateau {
 
     public Plateau(List<String> plateau){
         for (int y = 0; y < plateau.size(); y++) {
-            this.plateau.add(new ArrayList<Cellule>());
+            this.plateau.add(new ArrayList<>());
             char[] ligne= plateau.get(y).toCharArray();
             for (int x = 0; x < ligne.length; x++) {
                 this.plateau.get(y).add(new Cellule(ligne[x],x,y));
@@ -49,12 +48,12 @@ public class Plateau {
 
     public void contourCellule(Cellule cellule) {
         cellule.getCelluleAutour().clear();
-        int k = 0;
+
         for (int i = -1; i < 2; i++) {
             for (int j = -1; j < 2; j++) {
                 if (!( i== 0 && j==0) && this.getCellule(cellule.getX()+j, cellule.getY()+i).getEtat()) {
 
-                    cellule.getCelluleAutour().add(true);
+                    cellule.addCelluleAutour(true);
                 }
 
             }
@@ -77,8 +76,8 @@ public class Plateau {
 
     }
     private static List<String>recupLienTexte(String path) throws IOException {
-        Path pathEntrée = Paths.get(path);
-        List<String> plateauTexte = Files.readAllLines(pathEntrée);
+        Path pathEntree = Paths.get(path);
+        List<String> plateauTexte = Files.readAllLines(pathEntree);
         return plateauTexte;
     }
     @Override
