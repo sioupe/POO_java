@@ -1,5 +1,7 @@
 package fr.diginamic.listes;
 
+import java.util.Objects;
+
 public class Ville {
     private String nom;
     private int nbHab;
@@ -12,6 +14,14 @@ public class Ville {
         this.nom = nom;
         this.nbHab = nbHab;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Ville ville)) return false;
+        return nbHab == ville.nbHab && Objects.equals(nom, ville.nom);
+    }
+
 
     public void setNom(String nom) {
         this.nom = nom;
