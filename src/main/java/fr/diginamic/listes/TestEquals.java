@@ -9,5 +9,6 @@ public class TestEquals {
         Ville ville3 = new Ville("Marseilles", 5);
         System.out.println(ville1.equals(ville2));
         System.out.println(ville1.equals(ville3));
+        System.out.println(ville1==ville2);
     }
 }
